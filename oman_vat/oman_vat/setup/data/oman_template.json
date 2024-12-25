@@ -1,0 +1,162 @@
+{
+    "chart_of_accounts": {
+        "*": {
+            "item_tax_templates": [
+                {
+                    "title": "Oman VAT 5%",
+                    "taxes": [
+                        {
+                            "tax_type": {
+                                "account_name": "Output VAT 5%",
+                                "tax_rate": 5.00
+                            }
+                        },
+                        {
+                            "tax_type": {
+                                "account_name": "Output VAT Zero",
+                                "tax_rate": 0.00
+                            }
+                        },
+                        {
+                            "tax_type": {
+                                "account_name": "Output VAT Exempted",
+                                "tax_rate": 0.00
+                            }
+                        },
+                        {
+                            "tax_type": {
+                                "account_name": "Input VAT 5%",
+                                "tax_rate": 5.00,
+                                "root_type": "Asset"
+                            }
+                        },
+                        {
+                            "tax_type": {
+                                "account_name": "Input VAT Zero",
+                                "tax_rate": 0.00,
+                                "root_type": "Asset"
+                            }
+                        },
+                        {
+                            "tax_type": {
+                                "account_name": "Input VAT Exempted",
+                                "tax_rate": 0.00,
+                                "root_type": "Asset"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "title": "Oman VAT Zero",
+                    "taxes": [
+                        {
+                            "tax_type": {
+                                "account_name": "Output VAT 5%",
+                                "tax_rate": 0.00
+                            }
+                        },
+                        {
+                            "tax_type": {
+                                "account_name": "Output VAT Zero",
+                                "tax_rate": 0.00
+                            }
+                        },
+                        {
+                            "tax_type": {
+                                "account_name": "Output VAT Exempted",
+                                "tax_rate": 0.00
+                            }
+                        },
+                        {
+                            "tax_type": {
+                                "account_name": "Input VAT 5%",
+                                "tax_rate": 0.00,
+                                "root_type": "Asset"
+                            }
+                        },
+                        {
+                            "tax_type": {
+                                "account_name": "Input VAT Zero",
+                                "tax_rate": 0.00,
+                                "root_type": "Asset"
+                            }
+                        },
+                        {
+                            "tax_type": {
+                                "account_name": "Input VAT Exempted",
+                                "tax_rate": 0.00,
+                                "root_type": "Asset"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "title": "Oman VAT Exempted",
+                    "taxes": [
+                        {
+                            "tax_type": {
+                                "account_name": "Output VAT 5%",
+                                "tax_rate": 0.00
+                            }
+                        },
+                        {
+                            "tax_type": {
+                                "account_name": "Output VAT Zero",
+                                "tax_rate": 0.00
+                            }
+                        },
+                        {
+                            "tax_type": {
+                                "account_name": "Output VAT Exempted",
+                                "tax_rate": 0.00
+                            }
+                        },
+                        {
+                            "tax_type": {
+                                "account_name": "Input VAT 5%",
+                                "tax_rate": 0.00,
+                                "root_type": "Asset"
+                            }
+                        },
+                        {
+                            "tax_type": {
+                                "account_name": "Input VAT Zero",
+                                "tax_rate": 0.00,
+                                "root_type": "Asset"
+                            }
+                        },
+                        {
+                            "tax_type": {
+                                "account_name": "Input VAT Exempted",
+                                "tax_rate": 0.00,
+                                "root_type": "Asset"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "title": "Oman Excise 50%",
+                    "taxes": [
+                        {
+                            "tax_type": {
+                                "account_name": "Excise 50%",
+                                "tax_rate": 50.00
+                            }
+                        }
+                    ]
+                },
+                {
+                    "title": "Oman Excise 100%",
+                    "taxes": [
+                        {
+                            "tax_type": {
+                                "account_name": "Excise 100%",
+                                "tax_rate": 100.00
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

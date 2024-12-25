@@ -4,7 +4,7 @@
 
 frappe.query_reports["OMAN VAT"] = {
 	onload() {
-		frappe.breadcrumbs.add('Accounts');	
+		frappe.breadcrumbs.add('Accounts');
 	},
 	"filters": [
 		{
@@ -30,21 +30,21 @@ frappe.query_reports["OMAN VAT"] = {
 			"default": frappe.datetime.get_today()
 		}
 	],
-	"formatter": function(value, row, column, data, default_formatter) {
+	"formatter": function (value, row, column, data, default_formatter) {
 		if (data
-			&& (data.title=='VAT on Sales' || data.title=='VAT on Purchases')
-			&& data.title==value) {
+			&& (data.title == 'VAT on Sales' || data.title == 'VAT on Purchases')
+			&& data.title == value) {
 			value = $(`<span>${value}</span>`);
 			var $value = $(value).css("font-weight", "bold");
 			value = $value.wrap("<p></p>").parent().html();
 			return value
-		}else if (data.title=='Grand Total'){
-			if (data.title==value) {
+		} else if (data.title == 'Grand Total') {
+			if (data.title == value) {
 				value = $(`<span>${value}</span>`);
 				var $value = $(value).css("font-weight", "bold");
 				value = $value.wrap("<p></p>").parent().html();
 				return value
-			}else{
+			} else {
 				value = default_formatter(value, row, column, data);
 				value = $(`<span>${value}</span>`);
 				var $value = $(value).css("font-weight", "bold");
@@ -52,7 +52,7 @@ frappe.query_reports["OMAN VAT"] = {
 				console.log($value)
 				return value
 			}
-		}else{
+		} else {
 			value = default_formatter(value, row, column, data);
 			return value;
 		}

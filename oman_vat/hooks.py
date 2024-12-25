@@ -58,6 +58,7 @@ app_license = "MIT"
 
 # before_install = "oman_vat.install.before_install"
 # after_install = "oman_vat.install.after_install"
+after_install = "oman_vat.oman_vat.setup.operations.setup_oman_vat_setting.setup"
 
 # Desk Notifications
 # ------------------
@@ -91,8 +92,11 @@ app_license = "MIT"
 
 doc_events = {
     "Company": {
-        "on_update": "oman_vat.oman_vat.setup.operations.setup_oman_vat_setting.create_oman_vat_setting",
-        "on_update": "oman_vat.oman_vat.setup.operations.setup_oman_vat_setting.make_custom_fields"
+        "on_trash": ["oman_vat.oman_vat.setup.operations.setup_oman_vat_setting.delete_vat_settings_for_company"],
+        "on_update": [
+            "oman_vat.oman_vat.setup.operations.setup_tax_templates.setup_templates",
+            "oman_vat.oman_vat.setup.operations.setup_oman_vat_setting.create_company_settings"
+        ]
     },
     "Sales Invoice": {
         "after_insert": "oman_vat.events.accounts.sales_invoice.create_qr_code",
