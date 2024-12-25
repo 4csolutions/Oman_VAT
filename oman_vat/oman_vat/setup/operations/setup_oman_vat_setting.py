@@ -83,7 +83,7 @@ def make_custom_fields():
         label="Is Zero Rated",
         fieldtype="Check",
         fetch_from="item_code.is_zero_rated",
-        insert_after="tax_code",
+        insert_after="description",
         print_hide=1,
     )
 
