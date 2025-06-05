@@ -98,10 +98,10 @@ doc_events = {
             "oman_vat.oman_vat.setup.operations.setup_oman_vat_setting.create_company_settings"
         ]
     },
-    "Sales Invoice": {
-        "after_insert": "oman_vat.events.accounts.sales_invoice.create_qr_code",
-        "on_trash": "oman_vat.events.accounts.sales_invoice.delete_qr_code_file"
-    }
+    # "Sales Invoice": {
+    #     "after_insert": "oman_vat.events.accounts.sales_invoice.create_qr_code",
+    #     "on_trash": "oman_vat.events.accounts.sales_invoice.delete_qr_code_file"
+    # }
 }
 
 # Scheduled Tasks
